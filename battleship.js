@@ -21,5 +21,23 @@ while (isSunk == false) {
     } else {
         // We are gonna keep track of how many times the user hit a ship.
         guesses = guesses + 1;
+
+        // Going to start the the conditionals for hitting the ships
+        if (guess ==  location1 || guess == location2 || guess == location3)
+        {
+            // Let's sink the ships!
+            alert('HIT!');
+            hits = hits + 1;
+            if (hits == 3) {
+                isSunk = true;
+                alert('You sank my battleship!');
+            }
+        } else {
+            alert('MISS!');
+        }
     };
 }
+
+// Show the users the amount of misses and hits they took
+var stats = "You took " + guesses + " guesses to sink the battleship, " + "which means your shooting accuracy was " + (3/guesses);
+alert(stats);
