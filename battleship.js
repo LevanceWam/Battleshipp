@@ -1,8 +1,9 @@
 // Creating the locations for the ships.
+var randomLocation = Math.floor(Math.random() * 5);
 
-var location1 = 5;
-var location2 = 1;
-var location3 = 3;
+var location1 = randomLocation;
+var location2 = location1 + 1;
+var location3 = location2 + 1;
 
 // Will make the guess a prompt and have the user guess where the ships are.
 var guess;
