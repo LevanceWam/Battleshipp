@@ -1,5 +1,5 @@
 // Creating the locations for the ships.
-var randomLocation = Math.floor(Math.random() * 5);
+var randomLocation = Math.floor(Math.random() * 51);
 
 var location1 = randomLocation;
 var location2 = location1 + 1;
@@ -14,10 +14,10 @@ var guesses =0;
 var isSunk = false;
 
 while (isSunk == false) {
-    guess = prompt("Ready, aim, fire! (enter a number from 0-6) :");
+    guess = prompt("Ready, aim, fire! (enter a number from 0-50) :");
 
     // We are going to write a conditional to make sure that thee user doesn't go over the given numbers.
-    if (guess < 0 || guess > 6) {
+    if (guess < 0 || guess > 50) {
         alert('Please enter the right coorinates!');
     } else {
         // We are gonna keep track of how many times the user hit a ship.
